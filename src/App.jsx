@@ -44,11 +44,14 @@ function App() {
           ...prevScore,
           xScore: prevScore.xScore + 1,
         }));
-      } else {
+      } else if(winner==="O"){
         setScore((prevScore) => ({
           ...prevScore,
           oScore: prevScore.oScore + 1,
         }));
+      }
+      else {
+        resetGame();
       }
       resetGame();
     } else {
